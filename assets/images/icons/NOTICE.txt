@@ -1,0 +1,11 @@
+Font Awesome Free SVG icons
+
+The SVG files in this directory are from Font Awesome Free. Source and version
+attribution are retained in each SVG file. The included SVGs use version 7.3.1.
+
+Font Awesome Free icon artwork is licensed under CC BY 4.0:
+https://fontawesome.com/license/free
+Official source repository:
+https://github.com/FortAwesome/Font-Awesome
+
+The client logo in assets/images/logo.svg is not a Font Awesome asset.

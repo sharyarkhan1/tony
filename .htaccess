@@ -1,0 +1,18 @@
+Options -MultiViews
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# Keep the home page on the clean directory URL if index.php is requested directly.
+RewriteCond %{THE_REQUEST} \s/+(.*/)index\.php(?:[?\s]) [NC]
+RewriteRule ^index\.php$ /%1 [R=301,L,NE]
+
+# Redirect direct requests for PHP files to their extension-less URL.
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php(?:[?\s]) [NC]
+RewriteRule ^(.+?)\.php$ /%1 [R=301,L,NE]
+
+# Resolve extension-less page URLs to their PHP files.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]

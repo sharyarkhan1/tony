@@ -1,0 +1,15 @@
+# Local credentials and environment files
+config.local.php
+.env
+.env.*
+!.env.example
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+
+# Local dependency and editor state
+vendor/
+node_modules/
